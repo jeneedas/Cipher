@@ -3,6 +3,7 @@ import Layout from "./components/Layout"
 import Dashboard from "./pages/Dashboard"
 import NewAnalysis from "./pages/NewAnalysis"
 import Results from "./pages/Results"
+import "./App.css";
 
 function Placeholder({ title }: { title: string }) {
   return (
