@@ -52,6 +52,7 @@ src/
 │   └── index.ts
 ├── App.tsx
 └── main.tsx
+```
 
 ##Development
 
