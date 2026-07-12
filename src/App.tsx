@@ -1,67 +1,24 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Layout from "./components/Layout"
-import Dashboard from "./pages/Dashboard"
-import NewAnalysis from "./pages/NewAnalysis"
-import Results from "./pages/Results"
-import "./App.css";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
-function Placeholder({ title }: { title: string }) {
-  return (
-    <div className="page">
-      <div className="page-header">
-        <div>
-          <h1>{title}</h1>
-          <p>This workspace is being prepared.</p>
-        </div>
-      </div>
-    </div>
-  )
-}
+import Landing from "./pages/Landing";
+import Dashboard from "./pages/Dashboard";
+import NewAnalysis from "./pages/NewAnalysis";
+import Results from "./pages/Results";
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
+      <Routes>
+        <Route path="/" element={<Landing />} />
 
-          <Route
-            path="/analyses"
-            element={<Placeholder title="Analyses" />}
-          />
+        <Route path="/dashboard" element={<Dashboard />} />
 
-          <Route path="/analysis/new" element={<NewAnalysis />} />
+        <Route path="/new-analysis" element={<NewAnalysis />} />
 
-          <Route path="/results" element={<Results />} />
+        <Route path="/results" element={<Results />} />
 
-          <Route
-            path="/clusters"
-            element={<Placeholder title="Clusters" />}
-          />
-
-          <Route
-            path="/network"
-            element={<Placeholder title="Network" />}
-          />
-
-          <Route
-            path="/posts"
-            element={<Placeholder title="Posts" />}
-          />
-
-          <Route
-            path="/accounts"
-            element={<Placeholder title="Accounts" />}
-          />
-
-          <Route
-            path="/settings"
-            element={<Placeholder title="Settings" />}
-          />
-        </Routes>
-      </Layout>
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </BrowserRouter>
-  )
+  );
 }
-
-export default App
