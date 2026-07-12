@@ -54,7 +54,7 @@ src/
 └── main.tsx
 ```
 
-##Development
+## Development
 
 Clone the repository and install the required dependencies.
 
@@ -63,10 +63,10 @@ npm run dev
 
 The development server will start locally using Vite.
 
-Project Status
+## Project Status
 
 Cipher is currently under active development. The frontend analysis workspace and dashboard interface are being developed first, followed by dataset ingestion and behavioural coordination analysis.
 
-Disclaimer
+## Disclaimer
 
 Cipher identifies behavioural coordination patterns. It does not classify individual claims as true or false and should not be used as an automated fact-checking system.
